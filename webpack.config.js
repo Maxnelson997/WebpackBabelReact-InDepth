@@ -1,5 +1,6 @@
 
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -21,6 +22,10 @@ module.exports = {
       filename: 'bundle.js'
     },
     plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Webpack + Babel + React + More',
+            template: './src/index.html'
+        }),
         new webpack.HotModuleReplacementPlugin()
     ],
     devServer: {

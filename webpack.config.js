@@ -1,6 +1,7 @@
 
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -26,7 +27,8 @@ module.exports = {
             title: 'Webpack + Babel + React + More',
             template: './src/index.html'
         }),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new CleanWebpackPlugin()
     ],
     devServer: {
       contentBase: './dist',

@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    devtool: 'source-map',
     mode: 'production',
     entry: './src/index.js',
     module: {
@@ -24,6 +23,7 @@ module.exports = {
       publicPath: '/',
       filename: 'bundle.js'
     },
+    devtool: 'source-map',
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Webpack + Babel + React + More',

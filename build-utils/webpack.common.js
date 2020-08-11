@@ -1,10 +1,10 @@
 
+const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    mode: 'production',
     entry: './src/index.js',
     module: {
         rules: [
@@ -19,11 +19,10 @@ module.exports = {
         extensions: ['*', '.js', '.jsx']
     },
     output: {
-      path: __dirname + '/dist',
+      path: path.resolve(__dirname, '../', 'dist'),
       publicPath: '/',
       filename: 'bundle.js'
     },
-    devtool: 'source-map',
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Webpack + Babel + React + More',

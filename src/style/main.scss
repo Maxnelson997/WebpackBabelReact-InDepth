@@ -3,3 +3,8 @@ $h1-main: blue;
 h1 {
     color: $h1-main;
 }
+
+// layout
+@import './layout/layout';
+@import './layout/header';
+@import './layout/footer';
